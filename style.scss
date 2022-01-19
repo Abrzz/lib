@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+
+* {
+    font-family: roboto;
+}
+body {
+    padding:0;
+    margin: 0;
+
+    //display: flex;
+    //flex-direction: column;
+    
+    background-color: #bdbdbd;
+    height: 100%
+}
+
+
+.navbar {
+    background-color: rgb(43, 149, 248);
+    width: 100%;
+    height:5vh;
+    padding: 5px;
+    .navbar-logo {
+        font-size: 4vh;
+        font-weight: bold;
+        color: white;
+        text-decoration:none;
+
+    }
+}
+
+.form-container {
+
+    
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba($color: #000000, $alpha: 0.2);
+    .close-btn  {
+        //display: inline-block;
+        position: relative;
+        top: -25%;
+        right:-38%;
+        color :white;
+        background-color:rgb(24, 24, 24);
+        border-radius: 25px;
+        padding: 0 5px;
+        &:hover {
+            background-color: rgb(56, 56, 56);
+            cursor: pointer;
+        }
+    }
+    .form {
+        background-color: rgb(78, 78, 78);
+        border-radius: 15px;
+        width: Min(500px,90vw);
+        height: 350px;
+        color: white;
+        justify-content: center;
+        text-align: center;
+        .new-book {
+            background-color:rgb(43, 149, 248);
+            border-style: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            &:hover {
+                background-color: rgb(82, 170, 251);
+                cursor: pointer;
+                scale: 1.05;
+            }
+        } 
+    }
+}
+.Content-title {
+    margin-left: 2rem;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+.books-container {
+
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    //width: 800px;
+    height: fit-content;
+    margin: 2rem;
+    gap: 15px;
+
+}
+
+.book {
+
+    background-color: rgb(250, 243, 233);
+    width: 150px;
+    height: 200px;
+    border-radius: 0.9rem;
+    position: relative;
+    box-shadow: 4px 6px 10px 0px #757575;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 40px 5px 5px 5px;
+    justify-content: space-between;
+    
+    &:hover {
+        background-color: rgb(235, 235, 235);
+    }
+    .del-button {
+        
+        position: absolute;
+        top: 0px;
+        right:10px;
+        color :white;
+        background-color:rgb(245, 70, 85);
+        border-radius: 25px;
+        padding: 0 5px;
+        &:hover {
+            background-color: rgb(248, 114, 125);
+            cursor: pointer;
+        }
+    }
+  
+}
+
+
+
+.add-btn {
+    position: fixed;
+    right:2%;
+    bottom:2%;
+    width: 60px;
+    z-index: 2;
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    color:white;
+    font-size:40px;
+    border-radius: 100px;
+    background-color: rgb(245, 70, 85);
+    &:hover {
+        background-color:rgb(248, 114, 125) ;
+        cursor: pointer;
+    }
+    
+}
+
+.add-book {
+    background-color:  #d3d3d3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color:rgb(138, 138, 138);
+    font-weight: bold;
+    font-size: 32px;
+    &:hover {
+        cursor: pointer;
+        color: rgb(165, 165, 165);
+    }
+}
